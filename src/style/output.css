@@ -159,3 +159,6 @@
   }
 }
 @layer utilities;
+.bgColor {
+  background-color: #e01a1a;
+}
