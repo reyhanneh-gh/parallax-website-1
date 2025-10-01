@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
-.bgColor{
+/* npx @tailwindcss/cli -i ./src/style/master.css -o ./src/style/output.css --watch */
+/* color: #f2ff00 */
+.bgColor {
     background-color: #e01a1a;
 }
 
-/* color: #f2ff00 */
+.logoFilter {
+    filter: brightness(0%) invert();
+}
+
+.favFont1 {
+    font-family: "Poiret One", sans-serif;
+}
+.solidShadow{
+    box-shadow: 10px 10px 0 #f2ff00;
+}
