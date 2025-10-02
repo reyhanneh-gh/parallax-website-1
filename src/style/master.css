@@ -25,3 +25,25 @@
 .menuFZ {
     font-size: 40px !important;
 }
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: yellow transparent;
+}
+
+html::-webkit-scrollbar {
+    width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: yellow;
+    border-radius: 8px;
+}
+
+html::-webkit-scrollbar-button {
+    background-color: yellow;
+}
