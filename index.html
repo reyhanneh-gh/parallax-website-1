@@ -8,24 +8,52 @@
     <link rel="stylesheet" href="src/style/master.css">
     <link rel="stylesheet" href="src/style/output.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Prosto+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/assets/css/fontello.css">
 </head>
 
 <body class="w-full bgColor p-5">
-    <!-- --------------------------nav------------------------- -->
-    <nav class="w-full h-fit flex justify-between items-center *:flex *:items-center px-5">
-        <span class="material-symbols-outlined text-white w-1/3">dehaze</span>
+    <!-- --------------------------nav bar------------------------- -->
+    <nav class="w-full h-[10vh] flex justify-between items-center *:flex *:items-center px-5">
+        <div class="w-1/3 flex items-center"><span id="menuBtn"
+                class="material-symbols-outlined text-white cursor-pointer menuFZ hover:text-[#f2ff00] hover:scale-[.9] duration-300">dehaze</span>
+        </div>
         <figure class="w-1/3 justify-center">
             <img class="w-1/2 md:w-1/4 cursor-pointer logoFilter"
                 src="src/assets/img/6258ac2688c6ec2a8c6066bb_Untitled design - 2022-04-14T144817.670.png" alt="">
         </figure>
-        <figure class="w-1/3 justify-end">
-            <img class="w-[40px]"
+        <figure class="w-1/3 justify-end cursor-pointer">
+            <img class="w-[40px] hover:scale-[.9] duration-300"
                 src="src/assets/img/6258c8b4efabeeea9df2c194_Untitled design - 2022-04-14T212153.342.png" alt="">
         </figure>
     </nav>
     <!-- --------------------------slide 1------------------------- -->
     <div class="w-full h-fit relative">
+        <!-- --------------------------menu--------------------------- -->
+        <div id="menu" class="w-full h-[90vh] absolute top-0 left-0 flex flex-col p-10 favFont2 justify-center bgColor">
+            <ul
+                class="w-full h-fit flex flex-col justify-center md:justify-start items-center *:py-2.5 *:text-white text-3xl *:uppercase *:font-extrabold *:hover:tracking-widest *:duration-300 *:cursor-pointer">
+                <li>products</li>
+                <li>subscribe</li>
+                <li>about us</li>
+                <li>contact</li>
+            </ul>
+            <ul
+                class="w-full h-fit flex justify-center items-center mt-[50px] *:px-3 *:text-white *:text-[30px] *:hover:scale-[1.2] *:duration-300 *:hover:text-[#f2ff00]">
+                <li class="icon-instagram"></li>
+                <li class="icon-twitter-circled"></li>
+                <li class="icon-facebook-squared"></li>
+            </ul>
+            <figure class="w-[25%] h-fit absolute right-[40px] top-[10%] rotate-[-15deg]">
+                <img class="object-cover" src="src/assets/img/6258c0aeb75d6613540c5320_1.png" alt="">
+            </figure>
+            <figure class="w-[15%] h-fit absolute bottom-[50%] left-[10%] rotate-[-8deg]">
+                <img class="object-cover" src="src/assets/img/6258c0aef77c2919b743a092_2.png" alt="">
+            </figure>
+            <figure class="w-[15%] h-fit absolute top-[55%] left-[20%] rotate-[8deg]">
+                <img class="object-cover" src="src/assets/img/6258c0ae396194c46096e32c_3.png" alt="">
+            </figure>
+        </div>
         <!-- --------------------------header------------------------- -->
         <header class="w-full sm:w-7/12 h-fit md:pl-[70px] py-[40px] *:flex">
             <figure class="h-fit justify-center">
@@ -43,17 +71,44 @@
         </header>
         <!-- --------------------------jam pics------------------------- -->
         <div class="w-full h-[100vh] absolute top-0 left-0 -z-10">
-            <figure class="w-1/3 h-fit absolute right-[40px] top-[30px] rotate-[-15deg]">
+            <figure class="w-[30%] h-fit absolute right-[40px] top-[30px] rotate-[-15deg]">
                 <img class="object-cover" src="src/assets/img/6258c0aeb75d6613540c5320_1.png" alt="">
             </figure>
-            <figure class="w-1/4 h-fit absolute top-[70%] right-[30%] rotate-[-8deg]">
+            <figure class="w-[30%] h-fit absolute top-[70%] right-[25%] rotate-[-8deg]">
                 <img class="object-cover" src="src/assets/img/6258c0aef77c2919b743a092_2.png" alt="">
             </figure>
-            <figure class="w-1/4 h-fit absolute top-[70%] left-[10%]">
-            <img class="object-cover" src="src/assets/img/6258c0ae396194c46096e32c_3.png" alt="">
-        </figure>
+            <figure class="w-[30%] h-fit absolute top-[75%] left-[10%]">
+                <img class="object-cover" src="src/assets/img/6258c0ae396194c46096e32c_3.png" alt="">
+            </figure>
         </div>
     </div>
 </body>
+<script>
+    // ---------------------menu-----------------------
+    let menu = document.getElementById('menu')
+    let openMenu = false
+    menu.style.height = '0px'
+    menu.style.padding = '0px'
+    menu.style.overflow = 'hidden'
+    menuBtn = document.getElementById('menuBtn')
+    menuBtn.addEventListener('click', () => {
+        if (openMenu == false) {
+            menuBtn.innerText = 'close'
+            menu.style.height = '90vh'
+            menu.style.padding = '40px'
+            menuBtn.style.transform = 'rotate(180deg)'
+            menu.style.transition = '.5s'
+            openMenu = true
+        } else {
+            menuBtn.innerText = 'dehaze'
+            menu.style.height = '0px'
+            menu.style.padding = '0px'
+            menu.style.overflow = 'hidden'
+            menuBtn.style.transform = 'rotate(0deg)'
+            openMenu = false
+        }
+    })
+    // -----------------------------------------------
+</script>
 
 </html>
