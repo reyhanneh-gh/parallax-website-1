@@ -125,11 +125,12 @@
             openMenu = false
         }
     })
-    // -------------------jam scroll--------------------
+
     let fullHeight = window.innerHeight
     let jam = document.querySelectorAll('#jam>figure')
     window.addEventListener('scroll', () => {
         const scrollT = window.scrollY
+        // -------------------slide 1 parallax--------------------
         jam.forEach((val, i) => {
             if (scrollT <= fullHeight) {
                 jam[0].style.transform = 'translateX(50px) translateY(-100px) scale(0.9) rotate(30deg)'
@@ -142,12 +143,11 @@
                 jam[2].style.transform = 'translateX(0px) translateY(0px) scale(1) rotate(0deg)'
             }
         })
+        // -------------------slide 2 parallax--------------------
         const line1 = document.getElementById('line1')
         const line2 = document.getElementById('line2')
 
-        // Map scroll to horizontal movement
-        const moveX = scrollY * 0.2 // scroll 100px → move 20px
-
+        const moveX = scrollY * 0.2
         line1.style.transform = `translateX(${moveX}px)`
         line2.style.transform = `translateX(${-moveX}px)`
 
