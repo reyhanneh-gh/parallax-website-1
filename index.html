@@ -33,7 +33,7 @@
         <!-- --------------------------menu--------------------------- -->
         <div id="menu" class="w-full h-[90vh] absolute top-0 left-0 flex flex-col p-10 favFont2 justify-center bgColor">
             <ul
-                class="w-full h-fit flex flex-col justify-center md:justify-start items-center *:py-2.5 *:text-white text-3xl *:uppercase *:font-extrabold *:hover:tracking-widest *:duration-300 *:cursor-pointer">
+                class="w-full h-fit flex flex-col justify-center md:justify-start items-center *:py-2.5 *:text-white text-3xl *:uppercase *:font-extrabold *:hover:tracking-widest *:hover:text-[#f2ff00] *:duration-300 *:cursor-pointer">
                 <li>products</li>
                 <li>subscribe</li>
                 <li>about us</li>
@@ -72,30 +72,33 @@
         </header>
         <!-- --------------------------jam pics------------------------- -->
         <div id="jam" class="w-full h-[100vh] absolute top-0 left-0 -z-10">
-            <figure class="w-[28%] h-fit absolute right-[40px] top-[40%] sm:top-[35%] md:top-[10%] md:rotate-[-15deg]">
+            <figure class="w-[28%] h-fit absolute right-[5%] top-[50%] sm:top-[35%] md:top-[10%] md:rotate-[-15deg]">
                 <img class="object-cover" src="src/assets/img/6258c0aeb75d6613540c5320_1.png" alt="">
             </figure>
-            <figure class="w-[28%] h-fit absolute top-[60%] md:top-[60%] right-[25%] md:right-[30%] md:rotate-[8deg]">
+            <figure class="w-[28%] h-fit absolute top-[60%] md:top-[60%] right-[35%] md:right-[30%] md:rotate-[8deg]">
                 <img class="object-cover" src="src/assets/img/6258c0aef77c2919b743a092_2.png" alt="">
             </figure>
-            <figure class="w-[28%] h-fit absolute top-[70%] md:top-[75%] right-[55%] md:left-[5%]">
+            <figure class="w-[28%] h-fit absolute top-[70%] md:top-[75%] right-[65%] md:left-[5%]">
                 <img class="object-cover" src="src/assets/img/6258c0ae396194c46096e32c_3.png" alt="">
             </figure>
         </div>
     </div>
     <!-- --------------------------slide2--------------------------- -->
-    <div class="w-full h-[100vh] mt-[300px]">
-        <section class="py-[50px] flex flex-col justify-center">
+    <div class="w-full h-[100vh] mt-[5vh] sm:mt-[10vh] md:mt-[40vh]">
+        <section class="py-[50px] flex flex-col justify-center pl-[50px]">
             <div id="line1"
-                class="w-[70%] h-fit *:text-[60px] *:md:text-[80px] *:lg:text-[100px] flex gap-x-7 *:uppercase">
+                class="w-fit h-fit *:text-[50px] *:md:text-[80px] *:lg:text-[100px] flex gap-x-7 *:uppercase">
                 <p class="text-white favFont2 font-extrabold">the</p>
                 <p class="text-[#f2ff00] favFont2 font-extrabold">first</p>
             </div>
             <div id="line2"
-                class="w-[70%] h-fit *:text-[60px] *:md:text-[80px] *:lg:text-[100px] flex flex-wrap ite gap-x-7 items-center *:uppercase translate-x-[20%]">
+                class="w-fit h-fit *:text-[50px] *:md:text-[80px] *:lg:text-[100px] flex flex-wrap ite gap-x-7 items-center *:uppercase translate-x-[20%]">
                 <p class="text-white favFont2 font-extrabold">of its</p>
                 <p class="text-[#f2ff00] favFont2 font-extrabold">kind</p>
             </div>
+            <p class="w-full sm:w-[70%] md:w-[30%] text-white favFont1 text-[25px]">
+                Rogue&Rosy is changing up the jam industry with its brand new alcohol infused fruit jam.
+            </p>
         </section>
 
     </div>
@@ -147,7 +150,7 @@
         const line1 = document.getElementById('line1')
         const line2 = document.getElementById('line2')
 
-        const moveX = scrollY * 0.2
+        const moveX = scrollY * 0.1
         line1.style.transform = `translateX(${moveX}px)`
         line2.style.transform = `translateX(${-moveX}px)`
 
