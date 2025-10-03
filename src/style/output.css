@@ -18,6 +18,7 @@
     --tracking-widest: 0.1em;
     --radius-2xl: 1rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-spin: spin 1s linear infinite;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -299,6 +300,12 @@
   .h-\[10vh\] {
     height: 10vh;
   }
+  .h-\[50vh\] {
+    height: 50vh;
+  }
+  .h-\[80vh\] {
+    height: 80vh;
+  }
   .h-\[90vh\] {
     height: 90vh;
   }
@@ -338,11 +345,23 @@
   .w-\[50\%\] {
     width: 50%;
   }
+  .w-\[50px\] {
+    width: 50px;
+  }
   .w-\[70\%\] {
     width: 70%;
   }
   .w-\[70px\] {
     width: 70px;
+  }
+  .w-\[80px\] {
+    width: 80px;
+  }
+  .w-\[90\%\] {
+    width: 90%;
+  }
+  .w-\[95\%\] {
+    width: 95%;
   }
   .w-\[100px\] {
     width: 100px;
@@ -371,6 +390,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .animate-spin {
+    animation: var(--animate-spin);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -674,6 +696,11 @@
       margin-top: 40vh;
     }
   }
+  .md\:h-\[100vh\] {
+    @media (width >= 48rem) {
+      height: 100vh;
+    }
+  }
   .md\:w-1\/4 {
     @media (width >= 48rem) {
       width: calc(1/4 * 100%);
@@ -684,9 +711,34 @@
       width: 30%;
     }
   }
+  .md\:w-\[80\%\] {
+    @media (width >= 48rem) {
+      width: 80%;
+    }
+  }
+  .md\:w-\[90\%\] {
+    @media (width >= 48rem) {
+      width: 90%;
+    }
+  }
+  .md\:w-\[100px\] {
+    @media (width >= 48rem) {
+      width: 100px;
+    }
+  }
+  .md\:w-\[100vh\] {
+    @media (width >= 48rem) {
+      width: 100vh;
+    }
+  }
   .md\:w-\[150px\] {
     @media (width >= 48rem) {
       width: 150px;
+    }
+  }
+  .md\:w-\[180px\] {
+    @media (width >= 48rem) {
+      width: 180px;
     }
   }
   .md\:w-\[200px\] {
@@ -725,6 +777,13 @@
     :is(& > *) {
       @media (width >= 64rem) {
         font-size: 100px;
+      }
+    }
+  }
+  .\*\:lg\:text-\[110px\] {
+    :is(& > *) {
+      @media (width >= 64rem) {
+        font-size: 110px;
       }
     }
   }
@@ -880,6 +939,11 @@ html::-webkit-scrollbar-button {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
