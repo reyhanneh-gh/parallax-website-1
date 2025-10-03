@@ -15,7 +15,7 @@
 }
 
 .favFont2 {
-    font-family: "Prosto One", sans-serif;
+    font-family: "Saira Stencil One", sans-serif;
 }
 
 .solidShadow {
@@ -46,4 +46,8 @@ html::-webkit-scrollbar-thumb {
 
 html::-webkit-scrollbar-button {
     background-color: yellow;
+}
+
+#jam>figure {
+    will-change: transform;
 }

@@ -11,6 +11,8 @@
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --tracking-widest: 0.1em;
@@ -234,6 +236,9 @@
   .mt-\[50px\] {
     margin-top: 50px;
   }
+  .mt-\[300px\] {
+    margin-top: 300px;
+  }
   .flex {
     display: flex;
   }
@@ -273,11 +278,18 @@
   .w-\[50\%\] {
     width: 50%;
   }
+  .w-\[70\%\] {
+    width: 70%;
+  }
   .w-fit {
     width: fit-content;
   }
   .w-full {
     width: 100%;
+  }
+  .translate-x-\[20\%\] {
+    --tw-translate-x: 20%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .rotate-\[-8deg\] {
     rotate: -8deg;
@@ -297,6 +309,9 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .items-center {
     align-items: center;
   }
@@ -308,6 +323,9 @@
   }
   .justify-end {
     justify-content: flex-end;
+  }
+  .gap-x-7 {
+    column-gap: calc(var(--spacing) * 7);
   }
   .overflow-y-scroll {
     overflow-y: scroll;
@@ -345,6 +363,9 @@
   }
   .py-\[40px\] {
     padding-block: 40px;
+  }
+  .py-\[50px\] {
+    padding-block: 50px;
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -408,6 +429,11 @@
   .\*\:text-\[30px\] {
     :is(& > *) {
       font-size: 30px;
+    }
+  }
+  .\*\:text-\[60px\] {
+    :is(& > *) {
+      font-size: 60px;
     }
   }
   .\*\:font-extrabold {
@@ -544,6 +570,20 @@
       padding-left: 70px;
     }
   }
+  .\*\:md\:text-\[80px\] {
+    :is(& > *) {
+      @media (width >= 48rem) {
+        font-size: 80px;
+      }
+    }
+  }
+  .\*\:lg\:text-\[100px\] {
+    :is(& > *) {
+      @media (width >= 64rem) {
+        font-size: 100px;
+      }
+    }
+  }
 }
 .bgColor {
   background-color: #e01a1a;
@@ -555,7 +595,7 @@
   font-family: "Poiret One", sans-serif;
 }
 .favFont2 {
-  font-family: "Prosto One", sans-serif;
+  font-family: "Saira Stencil One", sans-serif;
 }
 .solidShadow {
   box-shadow: 10px 10px 0 #f2ff00;
@@ -564,11 +604,11 @@
   font-size: 40px !important;
 }
 html {
-  scrollbar-width: initial;
+  scrollbar-width: thin;
   scrollbar-color: yellow transparent;
 }
 html::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 html::-webkit-scrollbar-track {
   background: transparent;
@@ -579,6 +619,24 @@ html::-webkit-scrollbar-thumb {
 }
 html::-webkit-scrollbar-button {
   background-color: yellow;
+}
+#jam>figure {
+  will-change: transform;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -624,6 +682,9 @@ html::-webkit-scrollbar-button {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
