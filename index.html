@@ -234,7 +234,8 @@
             class="w-full h-fit flex flex-wrap justify-evenly items-center gap-y-[80px] md:gap-y-[100px] md:animate-bounce transform-3d perspective-midrange">
             <div
                 class="myTransform1 border-2 border-[#f2ff00] w-2/5 lg:w-1/5 h-fit rounded-[10px] solidShadow p-5 relative *:text-white">
-                <q class="favFont1 text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, maxime.
+                <q class="favFont1 text-[18px] font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum, maxime.
                     Tempore, veniam.
                 </q>
                 <figure class="w-2/3 h-fit absolute bottom-[110%] left-[50%] translate-x-[-50%]">
@@ -243,7 +244,8 @@
             </div>
             <div
                 class="myTransform1 border-2 border-[#f2ff00] w-2/5 lg:w-1/5 h-fit rounded-[10px] reverseSolidShadow p-5 relative *:text-white">
-                <q class="favFont1 text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, maxime.
+                <q class="favFont1 text-[18px] font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum, maxime.
                     Tempore, veniam.
                 </q>
                 <figure class="w-2/3 h-fit absolute bottom-[110%] left-[50%] translate-x-[-50%]">
@@ -252,7 +254,8 @@
             </div>
             <div
                 class="myTransform1 border-2 border-[#f2ff00] w-2/5 lg:w-1/5 h-fit rounded-[10px] solidShadow p-5 relative *:text-white">
-                <q class="favFont1 text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, maxime.
+                <q class="favFont1 text-[18px] font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum, maxime.
                     Tempore, veniam.
                 </q>
                 <figure class="w-2/3 h-fit absolute bottom-[110%] left-[50%] translate-x-[-50%]">
@@ -261,7 +264,8 @@
             </div>
             <div
                 class="myTransform1 border-2 border-[#f2ff00] w-2/5 lg:w-1/5 h-fit rounded-[10px] reverseSolidShadow p-5 relative *:text-white">
-                <q class="favFont1 text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, maxime.
+                <q class="favFont1 text-[18px] font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illum, maxime.
                     Tempore, veniam.
                 </q>
                 <figure class="w-2/3 h-fit absolute bottom-[110%] left-[50%] translate-x-[-50%]">
@@ -270,6 +274,42 @@
             </div>
         </div>
     </section>
+    <!-- --------------------------slide6--------------------------- -->
+    <div id="slide6"
+        class="my-[50px] md:my-0 px-5 w-full h-[100vh] flex flex-col justify-center relative pb-5 *:uppercase">
+        <p class="text-[50px] md:text-[80px] lg:text-[100px] w-[50%] lg:w-fit text-white favFont2 rotate-12 opacity-0">
+            delivered</p>
+        <p
+            class="text-[50px] md:text-[80px] lg:text-[100px] w-[50%] lg:w-fit text-[#f2ff00] favFont2 rotate-[-12deg] translate-x-10 opacity-0">
+            every month</p>
+        <p class="text-[50px] md:text-[80px] lg:text-[100px] w-[50%] lg:w-fit text-white favFont2 rotate-12 opacity-0">
+            to your door step</p>
+        <figure class="w-1/2 md:w-1/3 h-fit absolute bottom-0 right-[30px] opacity-0">
+            <img class="object-cover" src="src/assets/img/62586d9e444734d6a9ea99bc_cgvbcfb-p-1080.png" alt="">
+        </figure>
+        <button
+            class="w-fit h-fit py-2.5 px-[40px] rounded-2xl border-2 border-[#f2ff00] text-[#f2ff00] font-extrabold solidShadow text-[20px] hover:scale-[.9] duration-300 mt-[15px]">SUBSCRIBE</button>
+    </div>
+    <!-- --------------------------slide7--------------------------- -->
+    <div id="slide7" class="w-full h-[100vh] flex flex-wrap mt-[50px]">
+        <figure class="w-full md:w-1/2 h-0 flex flex-col items-center">
+            <img class="w-3/4" src="src/assets/img/Screenshot (34).png" alt="">
+            <figcaption class="favFont1 text-[25px] capitalize text-white">started by two jam lovers</figcaption>
+        </figure>
+        <div class="w-full h-full md:w-1/2 relative opacity-0">
+            <figure class="w-1/2 h-fit z-30 absolute top-[5%] right-[5%]">
+                <img class="rounded-[10px]" src="src/assets/img/6258a013bc8303f9c7956685_22-p-800.png" alt="">
+                <figure class="w-full h-fit z-20 absolute top-[70%] right-[90%]"><img
+                        class="object-cover rounded-[10px]" src="src/assets/img/62589f18c57a87bbe64fc058_14-p-800.png"
+                        alt="">
+                    <img class="w-full h-fit z-10 absolute top-[70%] lg:top-[60%] right-[-70%] lg:right-[90%] rounded-[10px]"
+                        src="src/assets/img/6258a0bb99b891a7f960ab60_25-p-800.png" alt="">
+                </figure>
+            </figure>
+        </div>
+    </div>
+    <!-- --------------------------slide8--------------------------- -->
+
 </body>
 
 <script>
@@ -383,7 +423,43 @@
         } else {
             page1.style.opacity = 0
         }
+        // -------------------slide 6 parallax--------------------
+        let p = document.querySelectorAll('#slide6>p')
+        const slide6 = document.getElementById('slide6')
+        const fig = document.querySelector('#slide6>figure')
+        const slide6Top = slide6.offsetTop
+        const Scroll6 = scrollT - slide6Top
 
+        if (Scroll6 >= 0 && Scroll6 < fullHeight) {
+            p.forEach((val, i) => {
+                val.style.transition = '0.2s'
+                p[0].style.transform = 'rotate(-12deg)'
+                p[0].style.opacity = '1'
+                p[1].style.transform = 'rotate(12deg)'
+                p[1].style.opacity = '1'
+                p[1].style.transitionDelay = '0.5s'
+                p[2].style.transform = 'rotate(-12deg)'
+                p[2].style.opacity = '1'
+                p[2].style.transitionDelay = '0.8s'
+            })
+            fig.style.transition = '1s'
+            fig.style.transitionDelay = '1.1s'
+            fig.style.bottom = '30%'
+            fig.style.opacity = '1'
+        }
+        // -------------------slide 7 parallax--------------------
+        let slide7 = document.getElementById('slide7')
+        let div1 = document.querySelector('#slide7>div')
+        let fig1 = document.querySelector('#slide7>figure')
+        const slide7Top = slide7.offsetTop
+        const Scroll7 = scrollT - slide7Top
+        if (Scroll7 >= 0 && Scroll7 < fullHeight) {
+            fig1.style.transition = '0.5s'
+            fig1.style.height = 'fit-content'
+            div1.style.transitionDelay = '0.4s'
+            div1.style.transition = '0.5s'
+            div1.style.opacity = '1'
+        }
     })
 
 

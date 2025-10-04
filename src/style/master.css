@@ -56,16 +56,22 @@ html::-webkit-scrollbar-button {
     will-change: transform;
 }
 
-#page2, #page3 {
-  transition: height 0.5s ease;
-  overflow: hidden;
+#page2,
+#page3 {
+    transition: height 0.5s ease;
+    overflow: hidden;
 }
 
-.myTransform1{
+.myTransform1 {
     transform: rotateX(10deg) !important;
     transform-origin: left !important;
 }
-.myTransform2{
+
+.myTransform2 {
     transform: rotateX(-10deg) !important;
     transform-origin: left !important;
+}
+
+html {
+    scroll-behavior: smooth;
 }
