@@ -4,7 +4,7 @@ A vibrant parallax website themed around jams and fruit spreads, built with HTML
 ---
 
 ## 🔗 Live Demo  
-[View Jam Parallax Site](https://frolicking-heliotrope-303ceb.netlify.app/) 🍇
+[View Jam Parallax Site](https://reliable-horse-de5c05.netlify.app/) 🍇
 
 ---
 
