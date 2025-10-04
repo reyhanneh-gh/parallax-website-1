@@ -22,6 +22,10 @@
     box-shadow: 10px 10px 0 #f2ff00;
 }
 
+.reverseSolidShadow {
+    box-shadow: -10px 10px 0 #f2ff00;
+}
+
 .menuFZ {
     font-size: 40px !important;
 }
@@ -55,4 +59,13 @@ html::-webkit-scrollbar-button {
 #page2, #page3 {
   transition: height 0.5s ease;
   overflow: hidden;
+}
+
+.myTransform1{
+    transform: rotateX(10deg) !important;
+    transform-origin: left !important;
+}
+.myTransform2{
+    transform: rotateX(-10deg) !important;
+    transform-origin: left !important;
 }

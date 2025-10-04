@@ -63,9 +63,7 @@
             </figure>
 
             <h1 class="w-[50%] text-white text-[20px] favFont1 py-[15px]">An amazing, all natural, organic
-                jam
-                for parties and
-                events.</h1>
+                jam for parties and events.</h1>
 
             <button
                 class="w-fit h-fit py-2.5 px-[40px] rounded-2xl border-2 border-[#f2ff00] text-[#f2ff00] font-extrabold solidShadow text-[20px] hover:scale-[.9] duration-300 mt-[15px]">Shop
@@ -226,6 +224,52 @@
             </div>
         </div>
     </section>
+    <!-- --------------------------slide5--------------------------- -->
+    <section class="w-full h-[100vh] flex flex-wrap justify-center">
+        <h4
+            class="w-full h-fit py-5 mb-[130px] lg:mb-[80px] text-center text-[50px] md:text-[80px] lg:text-[110px] text-[#f2ff00] uppercase favFont2">
+            as seen in
+        </h4>
+        <div
+            class="w-full h-fit flex flex-wrap justify-evenly items-center gap-y-[80px] md:gap-y-[100px] md:animate-bounce transform-3d perspective-midrange">
+            <div
+                class="myTransform1 border-2 border-[#f2ff00] w-2/5 lg:w-1/5 h-fit rounded-[10px] solidShadow p-5 relative *:text-white">
+                <q class="favFont1 text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, maxime.
+                    Tempore, veniam.
+                </q>
+                <figure class="w-2/3 h-fit absolute bottom-[110%] left-[50%] translate-x-[-50%]">
+                    <img class="object-cover" src="src/assets/img/625783e3e1b46b7ed1f98eac_3-p-500.png" alt="">
+                </figure>
+            </div>
+            <div
+                class="myTransform1 border-2 border-[#f2ff00] w-2/5 lg:w-1/5 h-fit rounded-[10px] reverseSolidShadow p-5 relative *:text-white">
+                <q class="favFont1 text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, maxime.
+                    Tempore, veniam.
+                </q>
+                <figure class="w-2/3 h-fit absolute bottom-[110%] left-[50%] translate-x-[-50%]">
+                    <img class="object-cover" src="src/assets/img/625783e3b40607a6785e3d5c_5-p-500.png" alt="">
+                </figure>
+            </div>
+            <div
+                class="myTransform1 border-2 border-[#f2ff00] w-2/5 lg:w-1/5 h-fit rounded-[10px] solidShadow p-5 relative *:text-white">
+                <q class="favFont1 text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, maxime.
+                    Tempore, veniam.
+                </q>
+                <figure class="w-2/3 h-fit absolute bottom-[110%] left-[50%] translate-x-[-50%]">
+                    <img class="object-cover" src="src/assets/img/625783e38745d8da6742a97a_1-p-500.png" alt="">
+                </figure>
+            </div>
+            <div
+                class="myTransform1 border-2 border-[#f2ff00] w-2/5 lg:w-1/5 h-fit rounded-[10px] reverseSolidShadow p-5 relative *:text-white">
+                <q class="favFont1 text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, maxime.
+                    Tempore, veniam.
+                </q>
+                <figure class="w-2/3 h-fit absolute bottom-[110%] left-[50%] translate-x-[-50%]">
+                    <img class="object-cover" src="src/assets/img/625783e37cb3834b51ba250e_4-p-500.png" alt="">
+                </figure>
+            </div>
+        </div>
+        </secti rounded-[10px] solidShadowon>
 </body>
 
 <script>
@@ -326,10 +370,10 @@
                     page3.style.opacity = 0
                     page3.style.transform = 'translateY(200px)'
                 } else {
-                    const progress31 = (progress3 - 0.3) / 0.7
-                    page2.style.opacity = `${1 - progress31}`
-                    page3.style.opacity = progress31
-                    page3.style.transform = `translateY(${(1 - progress31) * 200}px)`
+                    // const progress31 = (progress3 - 0.3) / 0.7
+                    page2.style.opacity = `${1 - progress3}`
+                    page3.style.opacity = progress3
+                    page3.style.transform = `translateY(${(1 - progress3) * 200}px)`
                     page3.style.transition = '0.5s'
                 }
                 jam1.style.opacity = 0
@@ -339,6 +383,7 @@
         } else {
             page1.style.opacity = 0
         }
+
     })
 
 
