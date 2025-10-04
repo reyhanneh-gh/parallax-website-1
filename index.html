@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Saira+Stencil+One&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="src/assets/css/fontello.css">
+    <link rel="stylesheet" href="src/style/myfooter.css">
 </head>
 
 <body class="w-full h-[100vh] bgColor p-5 scrollbar-custom overflow-y-scroll overflow-x-hidden">
@@ -310,29 +311,32 @@
     </div>
     <!-- --------------------------footer--------------------------- -->
     <div
-        class="w-full h-[100vh] flex flex-wrap justify-center items-center *:flex *:justify-center *:items-center *:border">
-        <div class="w-full h-fit md:w-1/3 md:h-full flex-col gap-5">
+        class="w-full h-[100vh] mt-[100px] flex flex-wrap justify-center items-center *:flex *:justify-center *:items-center gap-y-10">
+        <div class="w-full h-fit md:w-1/3 flex-col gap-5">
             <figure class="w-1/3 h-fit ">
                 <img class="object-cover cursor-pointer logoFilter"
                     src="src/assets/img/6258ac2688c6ec2a8c6066bb_Untitled design - 2022-04-14T144817.670.png" alt="">
             </figure>
             <h5 class="w-full text-center text-white text-[20px]">Subscribe to our news</h5>
-            <p class="w-10/12 text-center text-white favFont1 text-[18px]">The stories you’ll be talking about tomorrow —
+            <p class="w-10/12 text-center text-white favFont1 text-[18px]">The stories you’ll be talking about tomorrow
+                —
                 delivered straight to your inbox today</p>
-            <input class="mt-5 w-10/12 bg-transparent border-b border-b-white placeholder:text-white"
-             type="email" name="" id="" placeholder="Your Email Address...">
+            <input class="mt-5 w-10/12 bg-transparent border-b border-b-white placeholder:text-white" type="email"
+                name="" id="" placeholder="Your Email Address...">
         </div>
-        <div class="w-full h-fit md:w-1/3 md:h-full flex-col gap-5 *:text-white">
+        <div class="w-full h-fit md:w-1/3 flex-col gap-5 *:text-white">
             <h6 class="favFont2 text-[30px]">MENU</h6>
-            <ul class="w-full h-fit flex flex-wrap justify-center items-center *:py-2.5 *:text-center *:w-full *:h-fit *:hover:tracking-widest *:hover:text-[#f2ff00] *:duration-300 *:cursor-pointer">
+            <ul
+                class="w-full h-fit flex flex-wrap justify-center items-center *:py-2.5 *:text-center *:w-full *:h-fit *:hover:tracking-widest *:hover:text-[#f2ff00] *:duration-300 *:cursor-pointer">
                 <li>PRODUCTS</li>
                 <li>COLLECTIONS</li>
                 <li>SUBSCRIBE & SAVE</li>
             </ul>
         </div>
-        <div class="w-full h-fit md:w-1/3 md:h-full flex-col gap-5 *:text-white">
+        <div class="w-full h-fit md:w-1/3 flex-col gap-5 *:text-white">
             <h6 class="favFont2 text-[30px]">COMPANY</h6>
-            <ul class="w-full h-fit flex flex-wrap justify-center items-center *:py-2.5 *:text-center *:w-full *:h-fit *:hover:tracking-widest *:hover:text-[#f2ff00] *:duration-300 *:cursor-pointer">
+            <ul
+                class="w-full h-fit flex flex-wrap justify-center items-center *:py-2.5 *:text-center *:w-full *:h-fit *:hover:tracking-widest *:hover:text-[#f2ff00] *:duration-300 *:cursor-pointer">
                 <li>ABOUT US</li>
                 <li>SHIPPING & RETURN</li>
                 <li>FAQ</li>
@@ -340,9 +344,27 @@
                 <li>TERMS & CONDITIONS</li>
             </ul>
         </div>
-        
+        <!-- --------------------------my footer--------------------------- -->
+        <aside class="w-full h-fit">
+            <section class="scale-[.7] md:scale-[.9]">
+                <figure>
+                    <img src="src/assets/img/reyhaneh.jpeg.jpg" alt="">
+                </figure>
+                <div class="h-fit">
+                    <p class="pt-2.5 ">Developed by:</p>
+                    <h4>Reyhaneh Ghalambor</h4>
+                    <ul class="pb-2.5">
+                        <li><a class=" icon-github-circled-alt2" href="https://github.com/reyhanneh-gh"></a>
+                        </li>
+                        <li><a class=" icon-instagram" href="https://www.instagram.com/reyhaneh.alt/"></a></li>
+                        <li><a class=" icon-linkedin-circled"
+                                href="www.linkedin.com/in/reyhaneh-ghalambor-76a889368"></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
     </div>
-
 </body>
 
 <script>
@@ -455,6 +477,8 @@
             }
         } else {
             page1.style.opacity = 0
+            content4.style.zIndex = '-100'
+            page3.style.zIndex = '-100'
         }
         // -------------------slide 6 parallax--------------------
         let p = document.querySelectorAll('#slide6>p')
