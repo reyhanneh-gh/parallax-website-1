@@ -175,6 +175,9 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
   .absolute {
     position: absolute;
   }
@@ -343,6 +346,9 @@
   .my-\[50px\] {
     margin-block: 50px;
   }
+  .my-\[80px\] {
+    margin-block: 80px;
+  }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
@@ -357,6 +363,9 @@
   }
   .mt-\[100px\] {
     margin-top: 100px;
+  }
+  .mt-\[150px\] {
+    margin-top: 150px;
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -637,11 +646,17 @@
   .py-\[50px\] {
     padding-block: 50px;
   }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
   .pt-2\.5 {
     padding-top: calc(var(--spacing) * 2.5);
   }
   .pr-\[80px\] {
     padding-right: 80px;
+  }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
   }
   .pb-2\.5 {
     padding-bottom: calc(var(--spacing) * 2.5);
@@ -1098,6 +1113,11 @@
   .lg\:w-fit {
     @media (width >= 64rem) {
       width: fit-content;
+    }
+  }
+  .lg\:text-\[95px\] {
+    @media (width >= 64rem) {
+      font-size: 95px;
     }
   }
   .lg\:text-\[100px\] {

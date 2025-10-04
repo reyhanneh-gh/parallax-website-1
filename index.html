@@ -277,13 +277,13 @@
     </section>
     <!-- --------------------------slide6--------------------------- -->
     <div id="slide6"
-        class="my-[50px] md:my-0 px-5 w-full h-[100vh] flex flex-col justify-center relative pb-5 *:uppercase">
-        <p class="text-[50px] md:text-[80px] lg:text-[100px] w-[50%] lg:w-fit text-white favFont2 rotate-12 opacity-0">
+        class="px-5 w-full h-[100vh] flex flex-col justify-center relative pb-5 *:uppercase my-[80px]">
+        <p class="text-[50px] md:text-[80px] lg:text-[95px] w-[50%] lg:w-fit text-white favFont2 rotate-12 opacity-0">
             delivered</p>
         <p
-            class="text-[50px] md:text-[80px] lg:text-[100px] w-[50%] lg:w-fit text-[#f2ff00] favFont2 rotate-[-12deg] translate-x-10 opacity-0">
+            class="text-[50px] md:text-[80px] lg:text-[95px] w-[50%] lg:w-fit text-[#f2ff00] favFont2 rotate-[-12deg] translate-x-10 opacity-0">
             every month</p>
-        <p class="text-[50px] md:text-[80px] lg:text-[100px] w-[50%] lg:w-fit text-white favFont2 rotate-12 opacity-0">
+        <p class="text-[50px] md:text-[80px] lg:text-[95px] w-[50%] lg:w-fit text-white favFont2 rotate-12 opacity-0">
             to your door step</p>
         <figure class="w-1/2 md:w-1/3 h-fit absolute bottom-0 right-[30px] opacity-0">
             <img class="object-cover" src="src/assets/img/62586d9e444734d6a9ea99bc_cgvbcfb-p-1080.png" alt="">
@@ -311,7 +311,7 @@
     </div>
     <!-- --------------------------footer--------------------------- -->
     <div
-        class="w-full h-[100vh] mt-[100px] flex flex-wrap justify-center items-center *:flex *:justify-center *:items-center gap-y-10">
+        class="w-full h-[100vh] mt-[150px] flex flex-wrap justify-center items-center *:flex *:justify-center *:items-center gap-y-10">
         <div class="w-full h-fit md:w-1/3 flex-col gap-5">
             <figure class="w-1/3 h-fit ">
                 <img class="object-cover cursor-pointer logoFilter"
@@ -432,54 +432,69 @@
         let jam1 = document.getElementById('jam1')
         let content4 = document.getElementById('slide4Content')
 
-        const slide4Top = slide4.offsetTop
-        const Scroll4 = scrollT - slide4Top
+        window.addEventListener('scroll', () => {
+            let fullHeight = window.innerHeight
+            let scrollT = window.scrollY
+            let slide4Top = slide4.offsetTop
+            let slide4Height = slide4.offsetHeight
+            let Scroll4 = scrollT - slide4Top
 
-        if (Scroll4 >= 0 && Scroll4 < fullHeight * 3) {
-
-            content4.style.zIndex = '5'
-            page1.style.opacity = 1
-            page1.style.transition = '0.5s'
-            page1.style.zIndex = '10'
-            page1.style.transform = "translateY(0)"
-            jam1.style.opacity = "1"
-            sc.style.transform = 'rotate(-12deg)'
-            sc.style.transition = '1s'
-
-            if (Scroll4 >= fullHeight && Scroll4 < fullHeight * 2) {
-                const progress2 = (Scroll4 - fullHeight) / fullHeight
-
-                jam1.style.opacity = `${1 - progress2}`
-                page2.style.opacity = progress2
-                page2.style.transform = `translateY(${(1 - progress2) * 200}px)`
-                page2.style.transition = '0.5s'
+            if (scrollT >= slide4Top && scrollT < slide4Top + slide4Height - fullHeight) {
+                content4.style.position = 'fixed'
+                content4.style.top = '0'
             } else {
-                page2.style.opacity = 0
-            }
-
-            if (Scroll4 >= fullHeight * 2) {
-                const progress3 = (Scroll4 - fullHeight * 2) / fullHeight
-
-                if (progress3 < 0.5) {
-                    page2.style.opacity = 1
-                    page3.style.opacity = 0
-                    page3.style.transform = 'translateY(200px)'
+                content4.style.position = 'absolute'
+                if (scrollT < slide4Top) {
+                    content4.style.top = '0'
                 } else {
-                    // const progress31 = (progress3 - 0.3) / 0.7
-                    page2.style.opacity = `${1 - progress3}`
-                    page3.style.opacity = progress3
-                    page3.style.transform = `translateY(${(1 - progress3) * 200}px)`
-                    page3.style.transition = '0.5s'
+                    content4.style.top = `${slide4Height - fullHeight}px`
                 }
-                jam1.style.opacity = 0
-            } else {
-                page3.style.opacity = 0
             }
-        } else {
-            page1.style.opacity = 0
-            content4.style.zIndex = '-100'
-            page3.style.zIndex = '-100'
-        }
+
+            if (Scroll4 >= 0 && Scroll4 < fullHeight * 3) {
+                content4.style.zIndex = '5'
+                page1.style.opacity = 1
+                page1.style.transition = '0.5s'
+                page1.style.zIndex = '10'
+                page1.style.transform = "translateY(0)"
+                jam1.style.opacity = "1"
+                sc.style.transform = 'rotate(-12deg)'
+                sc.style.transition = '1s'
+
+                if (Scroll4 >= fullHeight && Scroll4 < fullHeight * 2) {
+                    const progress2 = (Scroll4 - fullHeight) / fullHeight
+                    jam1.style.opacity = `${1 - progress2}`
+                    page2.style.opacity = progress2
+                    page2.style.transform = `translateY(${(1 - progress2) * 200}px)`
+                    page2.style.transition = '0.5s'
+                } else {
+                    page2.style.opacity = 0
+                }
+
+                if (Scroll4 >= fullHeight * 2) {
+                    const progress3 = (Scroll4 - fullHeight * 2) / fullHeight
+                    if (progress3 < 0.5) {
+                        page2.style.opacity = 1
+                        page3.style.opacity = 0
+                        page3.style.transform = 'translateY(200px)'
+                    } else {
+                        page2.style.opacity = `${1 - progress3}`
+                        page3.style.opacity = progress3
+                        page3.style.transform = `translateY(${(1 - progress3) * 200}px)`
+                        page3.style.transition = '0.5s'
+                    }
+                    jam1.style.opacity = 0
+                } else {
+                    page3.style.opacity = 0
+                }
+            } else {
+                page1.style.opacity = 0
+                page2.style.opacity = 0
+                page3.style.opacity = 0
+                content4.style.zIndex = '-100'
+            }
+        })
+
         // -------------------slide 6 parallax--------------------
         let p = document.querySelectorAll('#slide6>p')
         const slide6 = document.getElementById('slide6')
