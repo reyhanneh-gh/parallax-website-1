@@ -343,6 +343,9 @@
   .my-\[50px\] {
     margin-block: 50px;
   }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
   .mt-\[5vh\] {
     margin-top: 5vh;
   }
@@ -538,6 +541,9 @@
   .justify-evenly {
     justify-content: space-evenly;
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .gap-x-7 {
     column-gap: calc(var(--spacing) * 7);
   }
@@ -567,8 +573,18 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
   .border-\[\#f2ff00\] {
     border-color: #f2ff00;
+  }
+  .border-b-white {
+    border-bottom-color: var(--color-white);
+  }
+  .bg-transparent {
+    background-color: transparent;
   }
   .object-cover {
     object-fit: cover;
@@ -633,6 +649,9 @@
   }
   .text-\[25px\] {
     font-size: 25px;
+  }
+  .text-\[30px\] {
+    font-size: 30px;
   }
   .text-\[50px\] {
     font-size: 50px;
@@ -700,6 +719,16 @@
       display: flex;
     }
   }
+  .\*\:h-fit {
+    :is(& > *) {
+      height: fit-content;
+    }
+  }
+  .\*\:w-full {
+    :is(& > *) {
+      width: 100%;
+    }
+  }
   .\*\:cursor-pointer {
     :is(& > *) {
       cursor: pointer;
@@ -710,6 +739,17 @@
       align-items: center;
     }
   }
+  .\*\:justify-center {
+    :is(& > *) {
+      justify-content: center;
+    }
+  }
+  .\*\:border {
+    :is(& > *) {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
   .\*\:px-3 {
     :is(& > *) {
       padding-inline: calc(var(--spacing) * 3);
@@ -718,6 +758,11 @@
   .\*\:py-2\.5 {
     :is(& > *) {
       padding-block: calc(var(--spacing) * 2.5);
+    }
+  }
+  .\*\:text-center {
+    :is(& > *) {
+      text-align: center;
     }
   }
   .\*\:text-\[30px\] {
@@ -755,6 +800,11 @@
   .\*\*\:text-\[25px\] {
     :is(& *) {
       font-size: 25px;
+    }
+  }
+  .placeholder\:text-white {
+    &::placeholder {
+      color: var(--color-white);
     }
   }
   .hover\:scale-\[\.9\] {
@@ -899,6 +949,11 @@
   .md\:h-\[100vh\] {
     @media (width >= 48rem) {
       height: 100vh;
+    }
+  }
+  .md\:h-full {
+    @media (width >= 48rem) {
+      height: 100%;
     }
   }
   .md\:w-1\/2 {
